@@ -1,0 +1,32 @@
+<!doctype html>
+<script src="https://ru.js.cx/test/libs.js"></script>
+<script src="test.js"></script>
+
+<body>
+  <script>
+    let a = 0;
+    let b = 0;
+    let calculator = {
+      read(a, b) {
+        for (i = 0; i < 1; i++) {
+          a = +prompt("Enter the first number");
+          b = +prompt("Enter the second number");
+        }
+      },
+
+      sum(a, b) {
+        return a + b;
+      },
+
+      mul(a, b) {
+        return a * b;
+      },
+    };
+
+    calculator.read();
+    alert( calculator.sum() );
+
+  </script>
+</body>
+
+</html>

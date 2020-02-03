@@ -1,0 +1,31 @@
+<!doctype html>
+
+<body>
+  <script src="https://ru.js.cx/test/libs.js"></script>
+  <script src="test.js"></script>
+  <script src="services.js"></script>
+  <script>
+  function getMaxSubSum(arr) {
+      let maxSum = 0;
+      let sum = 0;
+      let updateMaxSumIfSumIsGreater = () => {
+        if (sum > maxSum) {
+          maxSum = sum;
+        }
+      }
+      for (let i = 0; i < arr.length; i++) {
+        sum += arr[i];
+        if (sum < 0) {
+          sum = 0;
+        }
+        updateMaxSumIfSumIsGreater();
+      }
+      return maxSum;
+    }
+
+
+    
+  </script>
+</body>
+
+</html>

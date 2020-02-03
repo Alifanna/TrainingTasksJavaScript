@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<script src="https://ru.js.cx/test/libs.js"></script>
+<script src="test-array.js"></script>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    let sumInput = () => sum(getInput());
+    
+    function getInput() {
+      let numbers = [];
+      let input;
+      while (true) {
+        input = prompt("Enter a number");
+        if (isEmpty(input) || isString(input)) {
+          break;
+        }
+        numbers.push(+input);
+      }
+      return numbers;
+    }
+
+    function sum(numbers) {
+      let sum = 0;
+      for (let num of numbers) {
+        sum += num;
+      }
+      return sum;
+    }
+
+    function isString(input) {
+      return !isFinite(input);
+    }
+
+    function isEmpty(input) {
+      return input === "" || input === null;
+    }
+  </script>
+</body>
+
+</html>

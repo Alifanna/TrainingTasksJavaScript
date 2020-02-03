@@ -1,0 +1,33 @@
+<!doctype html>
+<script src="https://ru.js.cx/test/libs.js"></script>
+<script src="test.js"></script>
+<script>
+  function readNumber() {
+    let input;
+    while (true) {
+      input = getInput();
+      if (isEmpty(input)) {
+        return null;
+      }
+      if (isNumber(input)) {
+        return +input;
+      }
+    }
+  }
+
+  function getInput() {
+    return prompt("Enter a number", "");
+  }
+
+  function isEmpty(input) {
+    return input == null || input === ""; 
+  }
+
+  function isNumber(input) {
+    return !isNaN(input);
+  }
+</script>
+
+<body></body>
+
+</html>
